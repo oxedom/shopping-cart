@@ -11,10 +11,10 @@ const ShoppingPage = () => {
       src: "https://i.imgur.com/YsBEInJ.jpg",
     },
     {
-      name: "Pride",
+      name: "Tech Sounds",
       id: 2,
       price: "100$",
-      src: "https://i.imgur.com/ieZisSw.jpg",
+      src: "https://i.imgur.com/5ZVx6jF.jpg",
     },
     {
       name: "Wedding Dance",
@@ -70,12 +70,7 @@ const ShoppingPage = () => {
       price: "100$",
       src: "https://i.imgur.com/aQdMqtY.jpg",
     },
-    {
-      name: "Tech Sounds",
-      id: 12,
-      price: "100$",
-      src: "https://i.imgur.com/5ZVx6jF.jpg",
-    },
+
   ]);
   return (
     <div className="shoping-grid">
