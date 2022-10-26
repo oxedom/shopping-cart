@@ -7,12 +7,11 @@ import Contact from "./comps/Contact";
 const RouteSwitch = () => {
   return (
     <BrowserRouter>
-        <Nav></Nav>
+      <Nav></Nav>
       <Routes>
         <Route exact path="/" element={<HomePage />} />
         <Route path="/shop" element={<ShoppingPage />} />
         <Route path="/contact" element={<Contact />} />
-
       </Routes>
     </BrowserRouter>
   );
