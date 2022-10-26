@@ -49,17 +49,14 @@ a {
 }
 
 .card {
-  border: 1px solid black;
   display: flex;
   margin: 10px;
-  padding: 10px;
   background-color: #fff;
   justify-content: center;
-  align-items: center;
   min-width: 0;
   flex-direction: column;
   background-clip: border-box;
-  border-radius: 0.25rem;
+  /* border-radius: 0.25rem; */
 }
 
 .shoping-grid {
@@ -68,11 +65,12 @@ a {
 }
 
 .btn {
-  display: inline-block;
+    font-family: Satoshi-Bold;
+  display: block;
   font-weight: 400;
   text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
+  /* white-space: nowrap; */
+  /* vertical-align: middle; */
   background-color: #007bff;
   color: #fff;
   border-color: #007bff;
@@ -82,19 +80,48 @@ a {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  
+  transition: 0.2s ease-in-out;;
+}
+
+.btn:hover {
+    background-color: rgb(125, 17, 146);
+    color: rgb(0, 0, 0);
+    box-shadow: 0 5px 10px rgba(205, 195, 212, 0.4);
 }
 
 .card-img {
-  flex-grow: 2;
-  border-radius: 0.25rem;
+
   width: 100%;
-  height: auto;
+  height:75%;
   object-fit: cover;
   object-position: bottom;
 }
 
 .card-body {
-  align-self: flex-start;
+    display: flex;
+    
+    flex-grow:1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-title {
+    padding: 10px;
+    border-bottom: solid black 1px;
+    border-left: solid black 1px;
+    font-size: 1.1rem;
+}
+
+.card-pricebox {
+border-bottom: 1px solid black;
+border-right: 1px solid black;
+font-size: 16px;
+
+padding: 1%;
+/* border: 1px black solid; */
+display: flex;
+align-items: center;
+gap: 10px;
+
 }

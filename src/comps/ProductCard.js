@@ -6,12 +6,21 @@ const ProductCard = (props) => {
     <div className="card">
       <img class="card-img" src={imgsrc} alt="Card image cap"></img>
       <div className="card-body">
-        <h3> Title: {name}</h3>
+
+        <div className="card-title">
+        <h3>{name}</h3>
+        </div>
+
+
+        <section className="card-pricebox"> 
         <p> Price: {price}</p>
-        <button className="btn" onClick={handleClick}>
-          {" "}
-          Add to Cart
-        </button>
+          <button className="btn" onClick={handleClick}>
+            {" "}
+            Add to Cart
+          </button>
+        </section>
+     
+       
       </div>
     </div>
   );
