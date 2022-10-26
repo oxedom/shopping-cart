@@ -1,16 +1,18 @@
 import { useLocation } from "react-router-dom";
-
+import {useState } from "react";
 const ProductPage = () => {
 
 
     const location = useLocation()
-    const {fromShopRoute = 'defaultValue'} = location.state || {}
-    console.log(fromShopRoute);
+    const [product, setProduct] = useState({})
+    const {fromShopRoute = false, prodProps} = location.state || {}
+    
 
     
 
     return ( <div>
-        <h1> I am Product Page</h1>
+        <h1> {prodProps.name}</h1>
+        <img className='product-img' src={prodProps.src}/>
     </div>  );
 }
  

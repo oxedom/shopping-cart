@@ -24,6 +24,7 @@ body {
 }
 
 .navbar {
+    /* position: relative; */
   display: grid;
   grid-template-columns: 3fr 1fr 1fr 1fr;
   justify-content: center;
@@ -125,6 +126,10 @@ a {
     color: rgb(0, 0, 0);
 }
 
+
+.product-img {
+    width: 50%;
+}
 
 .card-img {
 

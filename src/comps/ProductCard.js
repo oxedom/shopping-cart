@@ -7,7 +7,7 @@ const ProductCard = (props) => {
   return (
     <div className="card">
       
-      <Link state={{fromShopRoute: true}} to={{pathname: `/shop/product/${id}`}}>
+      <Link state={{fromShopRoute: true, prodProps: props}} to={{pathname: `/shop/product/${id}`}}>
       <img className="card-img" src={imgsrc} alt="Card image cap"></img>
       </Link>
   
