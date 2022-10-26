@@ -88,11 +88,43 @@ a {
   transition: 0.2s ease-in-out;;
 }
 
+.btn-home {
+    padding: 100px;
+    background-color: black;
+}
+
+
+
+#homepage-img {
+    width: 30%;
+}
+
+.title-background {
+    z-index: -3;
+    bottom:  0.0001rem;
+    position:absolute;
+}
+
+.homepage-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Satoshi-Bold;
+}
+
 .btn:hover {
     background-color: rgb(125, 17, 146);
     color: rgb(0, 0, 0);
     box-shadow: 0 5px 10px rgba(205, 195, 212, 0.4);
 }
+
+.btn-home:hover {
+    box-shadow: 0 5px 10px rgba(205, 195, 212, 0.4);
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+
 
 .card-img {
 

@@ -1,5 +1,5 @@
 import ProductCard from "./ProductCard";
-
+import ProductMenu from "./ProductMenu";
 import { useState } from "react";
 
 const ShoppingPage = () => {
@@ -76,8 +76,10 @@ const ShoppingPage = () => {
     <div className="shoping-grid">
       {products.map((p) => (
         <ProductCard {...p} />
+     
       ))}
     </div>
+    
   );
 };
 
