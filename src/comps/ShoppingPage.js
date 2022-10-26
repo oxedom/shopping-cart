@@ -78,9 +78,10 @@ const ShoppingPage = () => {
     },
   ]);
   return (
-
     <div className="shoping-grid">
-        {products.map(p => <ProductCard {...p}/>)}
+      {products.map((p) => (
+        <ProductCard {...p} />
+      ))}
     </div>
   );
 };

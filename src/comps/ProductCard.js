@@ -1,16 +1,12 @@
-import img1 from "../imgs/1. Picture.jpg";
-
-
 const ProductCard = (props) => {
-  const {name, src: imgsrc, id, price } = props
-
+  const { name, src: imgsrc, id, price } = props;
 
   const handleClick = () => {};
   return (
     <div className="card">
-      <img class="card-img-top  img-fluid" src={imgsrc} alt="Card image cap"></img>
+      <img class="card-img" src={imgsrc} alt="Card image cap"></img>
       <div className="card-body">
-        <p> Title: {name}</p>
+        <h3> Title: {name}</h3>
         <p> Price: {price}</p>
         <button className="btn" onClick={handleClick}>
           {" "}

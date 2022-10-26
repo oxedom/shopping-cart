@@ -31,7 +31,8 @@ body {
   background-color: rgb(231, 183, 25);
 }
 
-p {
+p,
+h3 {
   font-family: Satoshi-Bold;
 }
 
@@ -85,13 +86,15 @@ a {
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.card img {
-  width: 20%;
+.card-img {
+  flex-grow: 2;
+  border-radius: 0.25rem;
+  width: 100%;
   height: auto;
   object-fit: cover;
   object-position: bottom;
 }
 
-.btn :hover {
-  /* background-color: darkblue; */
+.card-body {
+  align-self: flex-start;
 }
