@@ -1,5 +1,20 @@
+
+import ProductCard from './ProductCard';
+
 const ShoppingPage = () => {
-    return ( <div> <h1> Hello From Shopping Page</h1></div>);
+
+    return (<div className='container-fluid'>
+             <ProductCard></ProductCard>
+             <ProductCard></ProductCard>
+             <ProductCard></ProductCard>
+        
+  
+
+
+    
+
+
+    </div>);
 }
  
 export default ShoppingPage;

@@ -1,5 +1,4 @@
 
-import Navbar from './comps/Navbar';
 import RouteSwitch from './RouteSwitch';
 
 
