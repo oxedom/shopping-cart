@@ -2,6 +2,7 @@ import { useLocation, useParams, useNavigate } from "react-router-dom";
 import {useEffect, useState } from "react";
 
 import data from '../toy-api/data'
+import ProductMenu from "./ProductMenu";
 
 
 const ProductPage = () => {
@@ -39,10 +40,18 @@ const ProductPage = () => {
 
     }, [])
 
-    return ( <div>
-        <h1> {product.name}</h1>
-        <img className='product-img' loading="lazy" src={product.src}/>
-    </div>  );
+    return ( 
+    <div>
+  <div className="product-page-container">
+        <h1 > {product.name}</h1>
+        <img className='product-img' loading="lazy" src={product.src} alt={product.name}/>
+    </div> 
+
+<ProductMenu price={product.price}></ProductMenu> 
+    </div>
+    
+   );
 }
+
  
 export default ProductPage;

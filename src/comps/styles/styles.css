@@ -127,9 +127,6 @@ a {
 }
 
 
-.product-img {
-    width: 50%;
-}
 
 .card-img {
 
@@ -151,6 +148,26 @@ a {
 
     font-size: 1.1rem;
 }
+
+.product-page-container {
+    font-family:  Satoshi-Bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.product-img {
+    width: 50%;
+}
+
+.product-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* align-self: flex-start */
+}
+
 
 .card-pricebox {
 border-bottom: 1px solid black;
