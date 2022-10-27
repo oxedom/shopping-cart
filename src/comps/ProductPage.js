@@ -41,7 +41,7 @@ const ProductPage = () => {
 
     return ( <div>
         <h1> {product.name}</h1>
-        <img className='product-img' src={product.src}/>
+        <img className='product-img' loading="lazy" src={product.src}/>
     </div>  );
 }
  
