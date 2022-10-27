@@ -1,8 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+
+  const navigate = useNavigate()
+  const handleClick = () => navigate('/shop')
+
   return (
-    <div className="homepage-body">
+    <div   className="homepage-body">
 
 
 
@@ -34,7 +38,7 @@ const HomePage = () => {
         </h1>
 
 
-        <Link className="" to="shop">
+        <Link className="img-home" to="shop">
         <img id='homepage-img' src="https://i.imgur.com/TIIzwzi.jpg"/>
           </Link>
 

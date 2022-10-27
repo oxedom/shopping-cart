@@ -13,6 +13,7 @@ body {
   src: url(./Satoshi-Regular.ttf);
 }
 
+
 @font-face {
   font-family: Satoshi-Medium;
   src: url(./Satoshi-Medium.ttf);
@@ -43,6 +44,28 @@ a {
   text-decoration: none;
   color: inherit;
   font-family: Satoshi-Bold;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family:Satoshi-Bold;;
+}
+
+.img-home:hover {
+
+  transition: 0.2s ease-in-out;;
+    cursor:crosshair;
+}
+
+.img-home {
+    flex-grow: 0;
+    justify-self: start;
+}
+
+.contact img {
+    width: 50px;
 }
 
 .navbar h1 {
@@ -125,6 +148,7 @@ a {
 }
 
 .btn:hover {
+    cursor: crosshair;
     background-color: rgb(125, 17, 146);
     color: rgb(0, 0, 0);
     box-shadow: 0 5px 10px rgba(205, 195, 212, 0.4);
