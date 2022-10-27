@@ -24,7 +24,9 @@ body {
 }
 
 .navbar {
-    /* position: relative; */
+
+
+background-color: white;
   display: grid;
   grid-template-columns: 3fr 1fr 1fr 1fr;
   justify-content: center;
@@ -61,10 +63,14 @@ a {
 }
 
 .shoping-grid {
-    --sides: 5rem;
+    /* --sides: 5rem; */
+
+       
+        height: 100%;
+        width: 100%;
+    
     padding-top: 1rem;
-    padding-left: var(--sides);
-    padding-right: var(--sides);
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }

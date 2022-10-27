@@ -40,9 +40,9 @@ const HomePage = () => {
     
   
 
-      <div className="btn btn-home">
-        <Link to="shop">Take me to Shop</Link>
-      </div>
+  
+        <Link className="btn btn-home" to="shop">Take me to Shop</Link>
+
     </div>
   );
 };
