@@ -4,6 +4,8 @@ const HomePage = () => {
   return (
     <div className="homepage-body">
 
+
+
       <h1 className="title-background"> 
       Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
       Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
@@ -31,11 +33,15 @@ const HomePage = () => {
       
         </h1>
 
-    <div>
 
-    <img id='homepage-img' src="https://i.imgur.com/TIIzwzi.jpg"/>
+        <Link className="" to="shop">
+        <img id='homepage-img' src="https://i.imgur.com/TIIzwzi.jpg"/>
+          </Link>
 
-    </div>
+
+ 
+
+
     
     
   
