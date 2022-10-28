@@ -25,8 +25,7 @@ body {
 }
 
 .navbar {
-    max-width: 125rem;
-    min-width: 5rem;
+  width: 100vh;
 background-color: white;
   display: grid;
   grid-template-columns: 3fr 1fr 1fr 1fr;

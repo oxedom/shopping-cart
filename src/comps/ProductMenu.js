@@ -8,10 +8,11 @@ const ProductMenu = (props) => {
 
 
         <section className="card-pricebox"> 
-        <p> Price: {props.price}</p>
+    
+   
           <button className="btn" onClick={alert}>
             {" "}
-            Add to Cart
+            Add to Cart      <p> Price: {props.price}</p>
           </button>
         </section>
      

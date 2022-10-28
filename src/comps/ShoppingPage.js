@@ -9,8 +9,8 @@ const ShoppingPage = () => {
       name: "Camp Urim",
       id: 1,
       price: "100$",
-      src: "https://images.squarespace-cdn.com/content/v1/53164d0ae4b0c6f4c1788440/1652145003526-229VG586UR442MSW0Q20/aerochrome-11+%283%29_res.jpg?format=2500w",
-    //   src: "https://i.imgur.com/YsBEInJ.jpg",
+      // src: "https://images.squarespace-cdn.com/content/v1/53164d0ae4b0c6f4c1788440/1652145003526-229VG586UR442MSW0Q20/aerochrome-11+%283%29_res.jpg?format=2500w",
+      src: "https://i.imgur.com/YsBEInJ.jpg",
     },
     {
       name: "Tech Sounds",

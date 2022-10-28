@@ -10,7 +10,7 @@ const HomePage = () => {
 
 
 
-      <h1 className="title-background"> 
+      {/* <h1 className="title-background"> 
       Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
       Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
       Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
@@ -35,7 +35,7 @@ const HomePage = () => {
       
       
       
-        </h1>
+        </h1> */}
 
 
         <Link className="img-home" to="shop">
