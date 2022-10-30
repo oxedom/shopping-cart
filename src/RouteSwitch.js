@@ -4,6 +4,7 @@ import ShoppingPage from "./comps/ShoppingPage";
 import Nav from "./comps/Nav";
 import Contact from "./comps/Contact";
 import ProductPage from "./comps/ProductPage";
+import Checkout from "./comps/checkout";
 
 const RouteSwitch = (props) => {
   const { cart, setCart } = props.props;
@@ -20,6 +21,7 @@ const RouteSwitch = (props) => {
           element={<ProductPage props={{ setCart }} />}
         />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/checkout" element={<Checkout cart={cart} />} />
       </Routes>
     </BrowserRouter>
   );

@@ -24,6 +24,8 @@ body {
 }
 
 .nav-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 400;
   font-size: 32px;
   padding: 10px;
 }
@@ -203,7 +205,7 @@ grid-template-columns: repeat(3, 1fr);
 }
 
 .rotate {
-  animation: rotation 2s infinite alternate;
+  animation: rotation 4s infinite alternate;
 }
 
 .card-title {
