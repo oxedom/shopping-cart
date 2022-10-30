@@ -38,12 +38,13 @@ const HomePage = () => {
         </h1> */}
 
 
-        <Link className="img-home" to="shop">
-        <img id='homepage-img' src="https://i.imgur.com/TIIzwzi.jpg"/>
+        <Link className="img-home rotate" to="shop">
+        <img className="rotate" id='homepage-img' src="https://i.imgur.com/TIIzwzi.jpg"/>
+
           </Link>
 
 
-        <Link className="btn btn-home" to="shop">Take me to Shop</Link>
+        <Link className="rotate btn btn-home" to="shop">Take me to Shop</Link>
 
     </div>
   );

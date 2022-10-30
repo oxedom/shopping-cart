@@ -49,9 +49,10 @@ const ProductPage = (props) => {
 
         <h1 > {product.name}</h1>
         <img className='product-img' loading="lazy" src={product.src} alt={product.name}/>
+        <ProductMenu setCart={setCart} prod={product}></ProductMenu> 
     </div> 
        
-<ProductMenu setCart={setCart} prod={product}></ProductMenu> 
+
     </div>
     
    );
