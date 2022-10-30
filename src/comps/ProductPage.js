@@ -42,7 +42,9 @@ const ProductPage = () => {
 
     return ( 
     <div>
+
   <div className="product-page-container">
+
         <h1 > {product.name}</h1>
         <img className='product-img' loading="lazy" src={product.src} alt={product.name}/>
     </div> 
