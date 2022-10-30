@@ -3,7 +3,7 @@ import ProductMenu from "./ProductMenu";
 import { useState } from "react";
 
 const ShoppingPage = () => {
-    //All of the Products are stored in Shopping Page Comp
+  //All of the Products are stored in Shopping Page Comp
   const [products, setProducts] = useState([
     {
       name: "Camp Urim",
@@ -72,17 +72,14 @@ const ShoppingPage = () => {
       price: "100$",
       src: "https://i.imgur.com/aQdMqtY.jpg",
     },
-
   ]);
   return (
     //Rendering ALL PRODUCTS using MAP
     <div className="shoping-grid">
       {products.map((p) => (
         <ProductCard {...p} key={p.id} />
-     
       ))}
     </div>
-    
   );
 };
 
