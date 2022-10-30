@@ -92,15 +92,29 @@ a {
 
 .shoping-grid {
   /* --sides: 5rem; */
-
+  display: grid;
+    
   height: 100%;
   width: 100%;
-
   padding-top: 1rem;
+grid-template-columns: repeat(3, 1fr); 
 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  
 }
+
+
+@media screen and (min-width: 720px) {
+  .shoping-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .shoping-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 .btn {
   font-family: Satoshi-Bold;
@@ -108,7 +122,7 @@ a {
   /* flex-direction: column; */
   gap: 4.5rem;
   align-items: center;
-  font-weight: 400;
+  justify-content: center;
   background-color: #000000;
   color: rgb(255, 255, 255);
   user-select: none;
@@ -122,11 +136,13 @@ a {
 }
 
 .btn-home {
-  padding: 100px;
+  /* flex-grow: 1; */
+  /* padding: 50px; */
   background-color: black;
 }
 
 #homepage-img {
+  margin-left: 100px;
   width: 30%;
 }
 
@@ -140,6 +156,7 @@ a {
 
 .homepage-body {
   margin-top: 5rem;
+
   display: flex;
   /* grid-template-columns: repeat(2, 1fr); */
   /* grid-template-rows: repeat(2, 1fr); */
@@ -148,6 +165,8 @@ a {
   flex-direction: column;
   font-family: Satoshi-Bold;
 }
+
+
 
 .btn:hover {
   cursor: crosshair;
