@@ -24,6 +24,11 @@ body {
   src: url(./Satoshi-Regular.ttf);
 }
 
+.checkout-icon {
+  display: flex;
+  gap: 1rem
+}
+
 .navbar {
 
 background-color: white;
