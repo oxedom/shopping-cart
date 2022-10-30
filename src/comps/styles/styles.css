@@ -25,10 +25,10 @@ body {
 }
 
 .navbar {
-  width: 100vh;
+
 background-color: white;
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
   justify-content: center;
   align-items: center;
 

@@ -1,13 +1,15 @@
 import { useState } from "react";
-import { BrowserRouter } from "react-router-dom";
+import styles from './comps/styles/styles.css'
 import RouteSwitch from "./RouteSwitch";
 
 function App() {
 
+  const [cart, setCart] = useState([])
+
   return (
     <div className="App">
-    
-      <RouteSwitch ></RouteSwitch>
+      
+      <RouteSwitch props={{cart, setCart}}></RouteSwitch>
     </div>
   );
 }

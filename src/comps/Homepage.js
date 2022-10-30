@@ -43,14 +43,6 @@ const HomePage = () => {
           </Link>
 
 
- 
-
-
-    
-    
-  
-
-  
         <Link className="btn btn-home" to="shop">Take me to Shop</Link>
 
     </div>

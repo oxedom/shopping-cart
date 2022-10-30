@@ -7,25 +7,19 @@ import ProductPage from './comps/ProductPage'
 
 const RouteSwitch = (props) => {
 
-  const {count, SetCount} = props
+  const {cart, setCart} = props.props
+  console.log(cart);
  
   return (
-
-    
-   
-    <Router>
- <Nav/>
+    <BrowserRouter>
+ <Nav cart={cart} />
     <Routes>
-        <Route exact path="/" element={<HomePage />} />
-        <Route path="/shop" element={<ShoppingPage />} />
-        <Route path="/shop/product/:id" element={<ProductPage />} />
+        <Route exact path="/" element={<HomePage/>} />
+        <Route path="/shop" element={<ShoppingPage/>} />
+        <Route  path="/shop/product/:id" element={<ProductPage props={{setCart}}/>} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-    </Router>
-
-
-  
-
+    </BrowserRouter>
   );
 };
 

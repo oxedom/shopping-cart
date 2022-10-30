@@ -1,18 +1,20 @@
 const ProductMenu = (props) => {
+  const {setCart, prod} = props
+
     return ( 
         <div className="card-body">
 
         <div className="card-title">
-        <h3>{props.name}</h3>
+        <h3>{prod.name}</h3>
         </div>
 
 
         <section className="card-pricebox"> 
     
-   
-          <button className="btn" onClick={alert}>
+      
+          <button className="btn"  onClick={(e) => {props.setCart(prev => [prod, ...prev])}} >
             {" "}
-            Add to Cart      <p> Price: {props.price}</p>
+            Add to Cart<p> Price: {prod.price}</p>
           </button>
         </section>
      
