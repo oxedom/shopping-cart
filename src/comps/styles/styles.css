@@ -24,6 +24,11 @@ body {
   src: url(./Satoshi-Regular.ttf);
 }
 
+.nav-title {
+  font-size: 32px;
+  padding: 10px;
+}
+
 .checkout-icon {
   display: flex;
   gap: 1rem
