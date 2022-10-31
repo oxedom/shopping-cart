@@ -6,15 +6,7 @@ const Checkout = (props) => {
     const {cart} = props
     const [count, setCount] = useState([])
 
-    // function findByPropName (array,name) {
-    //     let result = {}
-    //     array.forEach(obj => {
 
-    //         if(obj['name'] === name ) { result = obj
-    //             console.log(obj);
-    //         return obj}
-        
-    // })}
 
     function countDups (data)
     {
@@ -36,9 +28,9 @@ const Checkout = (props) => {
 
     useEffect(() => { setCount(countDups(cart)) }, [cart])
 
-    return ( <section> 
-        <h1> Hello from Checkout </h1>
-        {console.log(count)}
+    return ( <section className="checkout-container"> 
+    
+     
         {count.map(e => <h1> {e.name}: {e.price}</h1>)}
     </section> );
 }

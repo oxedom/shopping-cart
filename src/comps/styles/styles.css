@@ -23,12 +23,25 @@ body {
   src: url(./Satoshi-Regular.ttf);
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: Satoshi-Bold;
+}
+
+p,
+h3 {
+  font-family: Satoshi-Bold;
+}
+
 .nav-title {
   font-family: 'Times New Roman', Times, serif;
   font-weight: 400;
   font-size: 32px;
   padding: 10px;
 }
+
+
 
 .checkout-icon {
   display: flex;
@@ -40,19 +53,17 @@ body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-content: center;
+  justify-items: center;
   align-items: center;
 }
 
-p,
-h3 {
-  font-family: Satoshi-Bold;
-}
 
-a {
-  text-decoration: none;
-  color: inherit;
-  font-family: Satoshi-Bold;
-}
+
+.navbar a:hover  { 
+  
+  font-size: larger;
+  }
+
 
 .contact {
   display: flex;
@@ -75,9 +86,11 @@ a {
   width: 50px;
 }
 
-.navbar h1 {
+.navbar h3 {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 32px;
   margin: 10px;
-  font-family: Satoshi-Bold;
+
   padding-left: 1rem;
 }
 
@@ -181,6 +194,15 @@ grid-template-columns: repeat(3, 1fr);
   box-shadow: 0 5px 10px rgba(205, 195, 212, 0.4);
   background-color: white;
   color: rgb(0, 0, 0);
+}
+
+.checkout-container {
+
+background-color: gray ;
+display: flex;
+justify-content: center;
+
+padding: 200PX;
 }
 
 .card-img {

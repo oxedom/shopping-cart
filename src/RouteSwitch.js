@@ -4,7 +4,7 @@ import ShoppingPage from "./comps/ShoppingPage";
 import Nav from "./comps/Nav";
 import Contact from "./comps/Contact";
 import ProductPage from "./comps/ProductPage";
-import Checkout from "./comps/checkout";
+import Checkout from "./comps/Checkout";
 
 const RouteSwitch = (props) => {
   const { cart, setCart } = props.props;

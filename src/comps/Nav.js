@@ -4,10 +4,8 @@ const Nav = (props) => {
   const { cart } = props;
   return (
     <nav className="navbar">
-      <Link to="/" className="nav-title">
-        {" "}
-        Sam's Photos
-      </Link>
+
+        <h3>Sam's Photos</h3>
       <Link to="/">Home</Link>
       <Link to="shop">Shop</Link>
       <Link to="contact">Contact</Link>
