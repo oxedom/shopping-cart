@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
-
+import Cartitem from './Cartitem'
 
 const Checkout = (props) => {
     const {cart} = props
@@ -11,15 +11,24 @@ const Checkout = (props) => {
     function countDups (data)
     {
         const countsByNames = {};
+        let finalArray = []
 
         data.forEach(({ name}) => {
             countsByNames[name] = (countsByNames[name] || 0) + 1;
 
 
         });
-        const finalArray = Object.entries(countsByNames)
+        const countArray = Object.entries(countsByNames)
         .map(([name, count,price,src,id]) => ({ name, count}))
         .sort((a, b) => b.count - a.count);
+
+        countArray.forEach(item => {
+            let missing = data.find(i => i.name === item.name )
+            finalArray.push({...missing, ...item})
+      
+        } )
+
+        
 
         return finalArray
     }
@@ -31,7 +40,7 @@ const Checkout = (props) => {
     return ( <section className="checkout-container"> 
     
      
-        {count.map(e => <h1> {e.name}: {e.price}</h1>)}
+        {count.map(e => <Cartitem key={e.name} props={e}></Cartitem>)}
     </section> );
 }
 export default Checkout;

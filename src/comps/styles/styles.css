@@ -1,6 +1,9 @@
 body {
   margin: 0;
   padding: 0;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards
 }
 
 @font-face {
@@ -50,6 +53,7 @@ h3 {
 
 .navbar {
   background-color: white;
+  width: 200vh;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-content: center;
@@ -60,8 +64,8 @@ h3 {
 
 
 .navbar a:hover  { 
-  
-  font-size: larger;
+  transition-duration: 100ms;
+  transform: scale(1.1);
   }
 
 
@@ -69,9 +73,13 @@ h3 {
   display: flex;
   align-items: center;
   flex-direction: column;
+  gap: 10px;
   font-family: Satoshi-Bold;
 }
 
+.contact a img { width: 50px;}
+
+.contact img { width: 400px;}
 .img-home:hover {
   transition: 0.2s ease-in-out;
   cursor: crosshair;
@@ -82,9 +90,7 @@ h3 {
   justify-self: start;
 }
 
-.contact img {
-  width: 50px;
-}
+
 
 .navbar h3 {
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -196,20 +202,54 @@ grid-template-columns: repeat(3, 1fr);
   color: rgb(0, 0, 0);
 }
 
+
+
+.cart-item img {
+  width: 200px;
+}
+
 .checkout-container {
 
-background-color: gray ;
-display: flex;
-justify-content: center;
 
+display: flex;
+flex-direction: column;
 padding: 200PX;
 }
 
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(217, 228, 217);
+  box-shadow: 4px 0.5px 1px #000000;
+  margin: 10px;
+
+}
+
+.cart-item img {
+  justify-self: start;
+}
+
 .card-img {
+
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: bottom;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+
+.card-img :after {
+  background-color: aqua;
 }
 
 .card-body {
@@ -217,18 +257,8 @@ padding: 200PX;
   padding: 10px;
 }
 
-@keyframes rotation {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.1);
-  }
-}
 
-.rotate {
-  animation: rotation 4s infinite alternate;
-}
+
 
 .card-title {
   font-size: 1.1rem;
