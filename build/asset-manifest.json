@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.cddbd3cc.css",
-    "main.js": "/shopping-cart/static/js/main.0ef43315.js",
-    "static/media/Satoshi-Medium.ttf": "/shopping-cart/static/media/Satoshi-Medium.759562088ba19068aef8.ttf",
-    "static/media/Satoshi-Regular.ttf": "/shopping-cart/static/media/Satoshi-Regular.fe762acc7e97cb612805.ttf",
-    "static/media/Satoshi-Bold.ttf": "/shopping-cart/static/media/Satoshi-Bold.137a52d9f47dd71c6247.ttf",
-    "index.html": "/shopping-cart/index.html",
-    "main.cddbd3cc.css.map": "/shopping-cart/static/css/main.cddbd3cc.css.map",
-    "main.0ef43315.js.map": "/shopping-cart/static/js/main.0ef43315.js.map"
+    "main.css": "/shopping-cart/index.html/static/css/main.624db56b.css",
+    "main.js": "/shopping-cart/index.html/static/js/main.0ef43315.js",
+    "static/media/Satoshi-Medium.ttf": "/shopping-cart/index.html/static/media/Satoshi-Medium.759562088ba19068aef8.ttf",
+    "static/media/Satoshi-Regular.ttf": "/shopping-cart/index.html/static/media/Satoshi-Regular.fe762acc7e97cb612805.ttf",
+    "static/media/Satoshi-Bold.ttf": "/shopping-cart/index.html/static/media/Satoshi-Bold.137a52d9f47dd71c6247.ttf",
+    "index.html": "/shopping-cart/index.html/index.html",
+    "main.624db56b.css.map": "/shopping-cart/index.html/static/css/main.624db56b.css.map",
+    "main.0ef43315.js.map": "/shopping-cart/index.html/static/js/main.0ef43315.js.map"
   },
   "entrypoints": [
-    "static/css/main.cddbd3cc.css",
+    "static/css/main.624db56b.css",
     "static/js/main.0ef43315.js"
   ]
 }
