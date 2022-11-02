@@ -29,3 +29,9 @@
     transition-duration: 100ms;
     transform: scale(1.1);
   }
+
+
+.checkout-icon {
+  display: flex;
+  gap: 1rem;
+}
