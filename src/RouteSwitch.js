@@ -8,7 +8,7 @@ import Checkout from "./components/Checkout/Checkout";
 
 const RouteSwitch = (props) => {
   const { cart, setCart } = props.props;
-  console.log(cart);
+
 
   return (
     <BrowserRouter>

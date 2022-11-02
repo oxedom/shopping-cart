@@ -2,17 +2,32 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: rgb(217, 228, 217);
-    box-shadow: 4px 0.5px 1px #000000;
+    background-color: rgb(198, 219, 197);
     margin: 10px;
+    padding: 1rem;
   }
   
   .cart-item img {
+    width: 20%;
     justify-self: start;
   }
 
-  .cart-item img {
-    width: 200px;
+
+
+  .plus-minus {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .plus-minus p{
+    font-size: 1.5rem;
+  }
+
+  .plus-minus svg {
+    /* background-color: aquamarine; */
+
+    width: 1rem;
   }
   
   

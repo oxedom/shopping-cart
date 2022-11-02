@@ -1,40 +1,48 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import './Checkout.css'
+import data from '../toy-api/data';
 import Cartitem from "../Cartitem/Cartitem"
 
 const Checkout = (props) => {
+
   const { cart } = props;
   const [count, setCount] = useState([]);
 
-  function countDups(data) {
-    const countsByNames = {};
-    let finalArray = [];
-
-    data.forEach(({ name }) => {
-      countsByNames[name] = (countsByNames[name] || 0) + 1;
-    });
-    const countArray = Object.entries(countsByNames)
-      .map(([name, count, price, src, id]) => ({ name, count }))
-      .sort((a, b) => b.count - a.count);
-
-    countArray.forEach((item) => {
-      let missing = data.find((i) => i.name === item.name);
-      finalArray.push({ ...missing, ...item });
-    });
-
-    return finalArray;
-  }
+ 
+const objectCounter = (objectPara) => 
+{
+  const counts = {};
+  objectPara.forEach(function (x) { counts[x] = (counts[x] || 0) + 1; });
+  return counts
+}
 
   useEffect(() => {
-    setCount(countDups(cart));
-  }, [cart]);
+    setCount(objectCounter(cart))
+    getItemData(cart)
+    
+  } ,[cart])
+
+  const removeDups = array => [...new Set(array)]
+
+  const getItemData = (array) => 
+  {
+    let result = []
+    array.forEach(item => 
+      {
+        let searchedItem = data.find(d => d.name = item)
+        result.push(searchedItem)
+      })
+  }
+
+ 
+
+ 
 
   return (
     <section className="checkout-container">
-      {count.map((e) => (
+      {/* {count.map((e) => (
         <Cartitem key={e.name} props={e}></Cartitem>
-      ))}
+      ))} */}
     </section>
   );
 };
