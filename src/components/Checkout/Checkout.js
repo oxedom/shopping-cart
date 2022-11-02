@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import Cartitem from "./Cartitem";
+import Cartitem from "../Cartitem/Cartitem"
 
 const Checkout = (props) => {
   const { cart } = props;
@@ -30,7 +30,7 @@ const Checkout = (props) => {
   }, [cart]);
 
   return (
-    <section className="checkout-container">
+    <section className="checkout-container">i
       {count.map((e) => (
         <Cartitem key={e.name} props={e}></Cartitem>
       ))}

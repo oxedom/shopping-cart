@@ -1,5 +1,5 @@
-import ProductCard from "./ProductCard";
-import ProductMenu from "./ProductMenu";
+import ProductCard from "../ProductCard/ProductCard";
+
 import { useState } from "react";
 
 const ShoppingPage = () => {

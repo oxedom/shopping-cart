@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./comps/styles/styles.css";
+import styles from "./components/styles/styles.css";
 import RouteSwitch from "./RouteSwitch";
 
 function App() {

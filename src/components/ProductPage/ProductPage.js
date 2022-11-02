@@ -1,8 +1,8 @@
 import { useLocation, useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import data from "../toy-api/data";
-import ProductMenu from "./ProductMenu";
+import data from "../toy-api/data"
+import ProductMenu from "../ProductMenu/ProductMenu"
 
 const ProductPage = (props) => {
   const { setCart } = props.props;
