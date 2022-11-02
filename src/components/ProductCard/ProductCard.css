@@ -1,0 +1,17 @@
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+  }
+  
+  .card-img :after {
+    background-color: aqua;
+  }
+  
+
+  
+  .card-title {
+    font-size: 1.1rem;
+  }
+

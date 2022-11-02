@@ -1,3 +1,4 @@
+import './contact.css'
 const Contact = () => {
   return (
     <main className="contact">

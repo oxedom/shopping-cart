@@ -1,0 +1,18 @@
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(217, 228, 217);
+    box-shadow: 4px 0.5px 1px #000000;
+    margin: 10px;
+  }
+  
+  .cart-item img {
+    justify-self: start;
+  }
+
+  .cart-item img {
+    width: 200px;
+  }
+  
+  

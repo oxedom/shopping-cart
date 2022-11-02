@@ -1,3 +1,5 @@
+import './Cartitem.css'
+
 const Cartitem = (props) => {
   const { name, count, price, src } = props.props;
 

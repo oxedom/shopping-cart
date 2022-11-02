@@ -1,3 +1,5 @@
+import './ProductMenu.css'
+
 const ProductMenu = (props) => {
   const { setCart, prod } = props;
 

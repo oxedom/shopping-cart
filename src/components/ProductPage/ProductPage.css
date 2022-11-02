@@ -1,0 +1,12 @@
+.product-page-container {
+    font-family: Satoshi-Bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .product-img {
+    width: 50%;
+  }
+  

@@ -1,0 +1,16 @@
+#homepage-img {
+    margin-left: 100px;
+    width: 30%;
+  }
+  
+  .homepage-body {
+    margin-top: 5rem;
+  
+    display: flex;
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* grid-template-rows: repeat(2, 1fr); */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Satoshi-Bold;
+  }

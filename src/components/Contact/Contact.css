@@ -1,0 +1,15 @@
+.contact {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    font-family: Satoshi-Bold;
+  }
+  
+  .contact a img {
+    width: 50px;
+  }
+  
+  .contact img {
+    width: 400px;
+  }

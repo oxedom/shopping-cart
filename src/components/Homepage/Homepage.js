@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+import './HomePage.className'
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -6,32 +7,7 @@ const HomePage = () => {
 
   return (
     <div className="homepage-body">
-      {/* <h1 className="title-background"> 
-      Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
-      Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
-      Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
-      Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
-      Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
-      Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
-      Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
-      Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
-      Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
-      Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
-      Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
-      Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
-    Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
-      Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
-      Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
-      Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
-      Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
-      Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
-      Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
-      Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
-      Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer Sam Photographer 
-      
-      
-      
-        </h1> */}
+
 
       <Link className="img-home rotate" to="shop">
         <img

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import './ProductCard.css'
 
 const ProductCard = (props) => {
   const { src: imgsrc, id, name } = props;

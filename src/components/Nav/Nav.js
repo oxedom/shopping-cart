@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import './Nav.css'
 const Nav = (props) => {
   const { cart } = props;
   return (

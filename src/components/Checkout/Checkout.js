@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import './Checkout.css'
 import Cartitem from "../Cartitem/Cartitem"
 
 const Checkout = (props) => {
