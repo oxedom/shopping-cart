@@ -6,7 +6,6 @@
   }
   
   .navbar h3 {
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     font-size: 32px;
     margin: 10px;
   
@@ -16,8 +15,10 @@
   
   
   .navbar {
+    position: sticky;;
+    top: 0;
     background-color: white;
-    width: 200vh;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     justify-content: center;
@@ -25,13 +26,41 @@
     align-items: center;
   }
   
-  .navbar a:hover {
-    transition-duration: 100ms;
-    transform: scale(1.1);
+  .navbar a {
+    display: inline-block;
+    position: relative;
+    color: #000000;
   }
 
 
+  .navbar a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  }
+
+  .navbar a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+
+
+
+
+
+
 .checkout-icon {
-  display: flex;
-  gap: 1rem;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 0.5rem;
+  grid-template-columns: 2fr 1fr;
 }
