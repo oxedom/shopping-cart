@@ -9,7 +9,7 @@ const Nav = (props) => {
       <Link to="shop">Shop</Link>
       <Link to="contact">Contact</Link>
       <div className="checkout-icon">
-        
+    
           <Link className="checkout-icon" to="checkout">
             {" "}
             {cart.length}

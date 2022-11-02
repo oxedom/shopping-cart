@@ -31,7 +31,7 @@ const Checkout = (props) => {
   }, [cart]);
 
   return (
-    <section className="checkout-container">i
+    <section className="checkout-container">
       {count.map((e) => (
         <Cartitem key={e.name} props={e}></Cartitem>
       ))}

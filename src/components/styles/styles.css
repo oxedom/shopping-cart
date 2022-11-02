@@ -39,16 +39,6 @@ h3 {
 
 
 
-.checkout-icon {
-  display: flex;
-  gap: 1rem;
-}
-
-
-
-
-
-
 @media screen and (min-width: 720px) {
   .shoping-grid {
     grid-template-columns: 1fr 1fr 1fr;
@@ -80,11 +70,7 @@ h3 {
   transition: 0.2s ease-in-out;
 }
 
-.btn-home {
-  /* flex-grow: 1; */
-  /* padding: 50px; */
-  background-color: black;
-}
+
 
 .btn:hover {
   background-color: rgb(255, 255, 255);
@@ -92,11 +78,6 @@ h3 {
   box-shadow: 0 5px 10px rgba(205, 195, 212, 0.4);
 }
 
-.btn-home:hover {
-  box-shadow: 0 5px 10px rgba(205, 195, 212, 0.4);
-  background-color: white;
-  color: rgb(0, 0, 0);
-}
 
 
 
