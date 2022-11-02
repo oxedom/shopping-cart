@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <div className="homepage-body">
 
-
+      <img className="" id='homepage-img' alt="the photographer" src="https://i.imgur.com/TIIzwzi.jpg"/>
 
       <Link className="rotate btn btn-home" to="shop">
         Take me to Shop

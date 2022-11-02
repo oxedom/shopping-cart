@@ -8,22 +8,22 @@ body {
 
 @font-face {
   font-family: Satoshi-Bold;
-  src: url(./Satoshi-Bold.ttf);
+  src: url(/public/assets/Satoshi-Bold.ttf);
 }
 
 @font-face {
   font-family: Satoshi-Regular;
-  src: url(./Satoshi-Regular.ttf);
+  src: url(/public/assets/Satoshi-Regular.ttf);
 }
 
 @font-face {
   font-family: Satoshi-Medium;
-  src: url(./Satoshi-Medium.ttf);
+  src: url(/public/assets/Satoshi-Medium.ttf);
 }
 
 @font-face {
   font-family: Satoshi-Regular;
-  src: url(./Satoshi-Regular.ttf);
+  src: url(/public/assets/Satoshi-Regular.ttf);
 }
 
 a {
