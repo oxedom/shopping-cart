@@ -26,14 +26,14 @@
     align-items: center;
   }
   
-  .navbar a {
+  .animateHover {
     display: inline-block;
     position: relative;
     color: #000000;
   }
 
 
-  .navbar a:after {
+  .animateHover:after {
   content: '';
   position: absolute;
   width: 100%;
@@ -46,11 +46,10 @@
   transition: transform 0.25s ease-out;
   }
 
-  .navbar a:hover:after {
+  .animateHover:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-
 
 
 

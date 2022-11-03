@@ -5,13 +5,13 @@ const Nav = (props) => {
   return (
     <nav className="navbar">
  
-      <h3>      Sam's Photos
+      <h3  className="animateHover">      Sam's Photos
 </h3>
 
-      <Link to="/">Home</Link>
-      <Link to="shop">Shop</Link>
-      <Link to="contact">Contact</Link>
-      <div className="checkout-icon">
+      <Link className="animateHover" to="/">Home</Link>
+      <Link  className="animateHover" to="shop">Shop</Link>
+      <Link   className="animateHover" to="contact">Contact</Link>
+      <div className="checkout-icon animateHover">
     
           <Link to="checkout"  >
      
