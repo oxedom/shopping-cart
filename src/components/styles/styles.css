@@ -78,6 +78,9 @@ h3 {
   box-shadow: 0 5px 10px rgba(205, 195, 212, 0.4);
 }
 
+.btn:active {
+ transform: scale(1.05);
+}
 
 
 

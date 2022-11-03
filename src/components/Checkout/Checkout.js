@@ -1,5 +1,6 @@
 import data from '../toy-api/data';
 import Cartitem from "../Cartitem/Cartitem"
+import './Checkout.css'
 import { useState, useEffect } from 'react';
 
 const Checkout = (props) => {
@@ -50,10 +51,18 @@ const Checkout = (props) => {
 
 
   return (
-    <section className="checkout-container">
-      {cartItems.map((e) => (
+    <section className='checkout-container' >
+      
+      {cart.length > 0 && <div className='full-cart'>  {cartItems.map((e) => (
         <Cartitem  key={e.name} props={{e, setCart, cart}}></Cartitem>
-      ))}
+      ))} 
+              <div className='checkout-btn'> Checkout </div>
+      </div>
+      }
+      {cart.length <= 0 && <h2> Your cart is empty... :(</h2>} 
+    
+
+
     </section>
   );
 };

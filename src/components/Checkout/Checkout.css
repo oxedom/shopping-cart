@@ -1,5 +1,34 @@
 .checkout-container {
-    display: flex;
-    flex-direction: column;
-    padding: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   }
+
+.checkout-btn {
+  font-family:  Satoshi-Bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  border-radius: 75px;
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255) ;
+}
+
+
+.checkout-btn:hover { 
+  background-color: black;
+  color: white;
+  transform: scale(1.05);
+}
+
+h2 { font-family:  Satoshi-Bold;}
+
+.full-cart {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+
+}

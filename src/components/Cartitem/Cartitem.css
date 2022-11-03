@@ -1,14 +1,16 @@
 .cart-item {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
     align-items: center;
-    justify-content: space-around;
+  
     background-color: rgb(198, 219, 197);
-    margin: 10px;
+    margin: 50px;
     padding: 1rem;
   }
   
   .cart-item img {
-    width: 20%;
+    width: 100%;
     justify-self: start;
   }
 
