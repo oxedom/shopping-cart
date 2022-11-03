@@ -7,23 +7,18 @@ const Cartitem = (props) => {
  
 
   const removeFromCart = (itemName) => {
-
+    
     const indexToRemove = cart.findIndex(c => { return c === itemName})
     setCart(prev => {
       prev.splice(indexToRemove,1)
-      console.log(prev);
-      return prev
+      return [...prev]
     } )
 
   }
 
-
-
   let total = parseInt(price.replace('$,"')) * count;
 
-  const handleClick = () => {
-    removeFromCart(name)
-  }
+  const handleClick = () => {removeFromCart(name) }
   return (
     <div className="cart-item">
       <img alt={name} src={src} />

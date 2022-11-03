@@ -3,8 +3,3 @@
     padding: 10px;
   }
 
-  @media (max-width: 1250px) {
-  .card-body {
-    flex-direction: column;
-  }
-  }
