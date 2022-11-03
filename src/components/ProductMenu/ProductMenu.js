@@ -1,16 +1,24 @@
+import { useEffect } from 'react';
 import './ProductMenu.css'
 
 const ProductMenu = (props) => {
 
-  const { setCart, prod } = props;
-  const addToCart = () => { setCart(prevState => { return [...prevState, prod.name]}) }
-  const handleClick = (e) => {addToCart()}
+  const { setCart, product, setProduct,  cart } = props;
+
+
+
+  const addToCart = (product) => {  setCart((prev) => { return [...prev,product]}) }
+    
+    
+  const handleClick = (e) => { addToCart(product)}
+
+
 
   return (
     <div className="card-body">
-      <button className="btn" onClick={handleClick} >
+      <button className="btn" onClick={handleClick}>
         {" "}
-        Add to Cart<p> Price: {prod.price}</p>
+        Add to Cart<p> Price: {product.price}</p>
       </button>
     </div>
   );

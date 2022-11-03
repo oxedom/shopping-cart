@@ -5,7 +5,7 @@ import data from "../toy-api/data"
 import ProductMenu from "../ProductMenu/ProductMenu"
 
 const ProductPage = (props) => {
-  const { setCart } = props.props;
+  const { setCart, cart} = props.props;
 
   const errorIMG = "https://www.rastanley.com.au/img/products/NoImageLarge.png";
   const errorObj = { name: "NO IMG", src: errorIMG };
@@ -44,7 +44,7 @@ const ProductPage = (props) => {
     <div>
       <div className="product-page-container">
         <h1> {product.name}</h1>
-        <ProductMenu setCart={setCart} prod={product}></ProductMenu>
+        <ProductMenu setCart={setCart} product={product} setProduct={setProduct} cart={cart}></ProductMenu>
         <img
           className="product-img"
           loading="lazy"

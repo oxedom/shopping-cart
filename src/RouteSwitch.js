@@ -18,7 +18,7 @@ const RouteSwitch = (props) => {
         <Route path="/shop" element={<ShoppingPage />} />
         <Route
           path="/shop/product/:id"
-          element={<ProductPage props={{ setCart }} />}
+          element={<ProductPage props={{ setCart, cart}} />}
         />
         <Route path="/contact" element={<Contact />} />
         <Route path="/checkout" element={<Checkout cart={cart} setCart={setCart} />} />

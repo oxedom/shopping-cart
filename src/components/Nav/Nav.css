@@ -13,9 +13,8 @@
   }
   
   
-  
   .navbar {
-    position: sticky;;
+    position: sticky;
     top: 0;
     background-color: white;
     width: 100%;
@@ -52,10 +51,6 @@
   }
 
 
-
-
-
-
 .checkout-icon {
   display: grid;
   align-items: center;
@@ -63,3 +58,23 @@
   grid-gap: 0.5rem;
   grid-template-columns: 1fr 1fr;
 }
+
+@media (max-width: 600px) {
+  .nav-title
+    {
+      font-size: 12px;
+      padding: 0
+  } 
+.navbar {
+  grid-template-columns: auto;
+  grid-gap: 1rem;
+  position: relative;
+  
+}
+
+
+
+}
+
+
+
