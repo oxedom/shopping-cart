@@ -1,9 +1,17 @@
+import { useEffect } from 'react';
 import './Cartitem.css'
 
 const Cartitem = (props) => {
-  const { name, count, price, src } = props.props;
+  const {  removeMethod } = props.props;
+  const { name, count, price, src, } = props.props.e
+ 
 
   let total = parseInt(price.replace('$,"')) * count;
+
+  const handleClick = () => {
+    alert(name)
+    removeMethod(name)
+  }
   return (
     <div className="cart-item">
       <img alt={name} src={src} />
@@ -12,7 +20,7 @@ const Cartitem = (props) => {
       <div className='plus-minus' > 
    
  
-        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m21 11.75c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75z" fill-rule="nonzero"/></svg>
+        <svg clip-rule="evenodd" onClick={handleClick} fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m21 11.75c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75z" fill-rule="nonzero"/></svg>
 
     
       

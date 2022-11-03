@@ -5,9 +5,18 @@ import RouteSwitch from "./RouteSwitch";
 function App() {
   const [cart, setCart] = useState([]);
 
+  const removeFromCart = (itemName) => {
+
+    // const indexOfName = cart.findIndex(name => {return name === itemName})
+    // const tempCart = cart 
+    // tempCart.splice(indexOfName, 1)
+    // setCart(tempCart)
+ 
+  }
+
   return (
     <div className="App">
-      <RouteSwitch props={{ cart, setCart }}></RouteSwitch>
+      <RouteSwitch props={{ cart, setCart, removeFromCart }}></RouteSwitch>
     </div>
   );
 }

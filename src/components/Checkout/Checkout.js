@@ -5,10 +5,13 @@ import Cartitem from "../Cartitem/Cartitem"
 
 const Checkout = (props) => {
 
-  const { cart } = props;
-  const [count, setCount] = useState([]);
+  const { cart, removeMethod } = props;
+  const [cartItems, setCartItems] = useState([]);
 
  
+
+
+
 const objectCounter = (objectPara) => 
 {
   const counts = {};
@@ -16,11 +19,7 @@ const objectCounter = (objectPara) =>
   return counts
 }
 
-  useEffect(() => {
-    setCount(objectCounter(cart))
-    getItemData(cart)
-    
-  } ,[cart])
+
 
   const removeDups = array => [...new Set(array)]
 
@@ -29,20 +28,38 @@ const objectCounter = (objectPara) =>
     let result = []
     array.forEach(item => 
       {
-        let searchedItem = data.find(d => d.name = item)
+        
+        let searchedItem = data.find(d => d.name === item)
         result.push(searchedItem)
       })
+      return result
   }
 
- 
+
+  useEffect((e) => {
+    //Counts the amounts of dups in the cart array 
+    let itemsCount = objectCounter(cart)
+    //Removes Dups from Array and Gets there data from the TOY API
+    let items = getItemData(removeDups(cart))
+
+    //Merges the Two Objects
+    for (const property in itemsCount) {
+      items.forEach(i => {
+        if(i['name'] === property ) {
+          i.count = itemsCount[property]
+        } 
+      })
+    }
+    setCartItems(items)
+  }, [cart])
 
  
 
   return (
     <section className="checkout-container">
-      {/* {count.map((e) => (
-        <Cartitem key={e.name} props={e}></Cartitem>
-      ))} */}
+      {cartItems.map((e) => (
+        <Cartitem key={e.name} props={{e, removeMethod}}></Cartitem>
+      ))}
     </section>
   );
 };

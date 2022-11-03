@@ -7,7 +7,7 @@ import ProductPage from "./components/ProductPage/ProductPage";
 import Checkout from "./components/Checkout/Checkout";
 
 const RouteSwitch = (props) => {
-  const { cart, setCart } = props.props;
+  const { cart, setCart, removeFromCart } = props.props;
 
 
   return (
@@ -21,7 +21,7 @@ const RouteSwitch = (props) => {
           element={<ProductPage props={{ setCart }} />}
         />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/checkout" element={<Checkout cart={cart} />} />
+        <Route path="/checkout" element={<Checkout cart={cart} removeMethod={removeFromCart} />} />
       </Routes>
     </BrowserRouter>
   );
