@@ -21,7 +21,7 @@ const RouteSwitch = (props) => {
           element={<ProductPage props={{ setCart }} />}
         />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/checkout" element={<Checkout cart={cart} removeMethod={removeFromCart} />} />
+        <Route path="/checkout" element={<Checkout cart={cart} setCart={setCart} />} />
       </Routes>
     </BrowserRouter>
   );

@@ -5,13 +5,11 @@ import Cartitem from "../Cartitem/Cartitem"
 
 const Checkout = (props) => {
 
-  const { cart, removeMethod } = props;
+  const { cart, setCart } = props;
+;
   const [cartItems, setCartItems] = useState([]);
-
+  const [update, setUpdate] = useState(true)
  
-
-
-
 const objectCounter = (objectPara) => 
 {
   const counts = {};
@@ -19,11 +17,9 @@ const objectCounter = (objectPara) =>
   return counts
 }
 
+const removeDups = array => [...new Set(array)]
 
-
-  const removeDups = array => [...new Set(array)]
-
-  const getItemData = (array) => 
+const getItemData = (array) => 
   {
     let result = []
     array.forEach(item => 
@@ -36,7 +32,8 @@ const objectCounter = (objectPara) =>
   }
 
 
-  useEffect((e) => {
+useEffect(() => {
+
     //Counts the amounts of dups in the cart array 
     let itemsCount = objectCounter(cart)
     //Removes Dups from Array and Gets there data from the TOY API
@@ -50,15 +47,15 @@ const objectCounter = (objectPara) =>
         } 
       })
     }
-    setCartItems(items)
-  }, [cart])
+
+  }, [update])
 
  
 
   return (
     <section className="checkout-container">
       {cartItems.map((e) => (
-        <Cartitem key={e.name} props={{e, removeMethod}}></Cartitem>
+        <Cartitem key={e.name} props={{e, setCart, cart, setUpdate}}></Cartitem>
       ))}
     </section>
   );

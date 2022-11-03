@@ -2,15 +2,27 @@ import { useEffect } from 'react';
 import './Cartitem.css'
 
 const Cartitem = (props) => {
-  const {  removeMethod } = props.props;
+  const { setCart, cart} = props.props
   const { name, count, price, src, } = props.props.e
  
+
+  const removeFromCart = (itemName) => {
+
+    const indexToRemove = cart.findIndex(c => { return c === itemName})
+    setCart(prev => {
+      prev.splice(indexToRemove,1)
+      console.log(prev);
+      return prev
+    } )
+
+  }
+
+
 
   let total = parseInt(price.replace('$,"')) * count;
 
   const handleClick = () => {
-    alert(name)
-    removeMethod(name)
+    removeFromCart(name)
   }
   return (
     <div className="cart-item">
