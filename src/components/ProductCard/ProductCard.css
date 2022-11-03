@@ -9,6 +9,12 @@
   .card-img :after {
     background-color: aqua;
   }
+
+  .card-img:hover {
+    transform: scale(1.005);
+    background-color: black;
+
+  }
   
 
   

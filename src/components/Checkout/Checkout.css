@@ -32,3 +32,8 @@ h2 { font-family:  Satoshi-Bold;}
   align-items: center;
 
 }
+
+.empty-cart {
+  font-size: 72px;
+  margin-top: 10rem;
+}

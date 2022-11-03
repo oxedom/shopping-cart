@@ -8,8 +8,7 @@ const Checkout = (props) => {
   const { cart, setCart } = props;
   const [cartItems, setCartItems] = useState([]);
 
-  const objectCounter = (objectPara) => 
-  {
+  const objectCounter = (objectPara) => {
     const counts = {};
     objectPara.forEach(function (x) { counts[x] = (counts[x] || 0) + 1; });
     return counts
@@ -18,16 +17,14 @@ const Checkout = (props) => {
 
   const removeDups = array => [...new Set(array)]
 
-  const getItemData = (array) => 
-  {
+  const getItemData = (array) => {
     let result = []
-    array.forEach(item => 
-      {
-        
-        let searchedItem = data.find(d => d.name === item)
-        result.push(searchedItem)
-      })
-      return result
+    array.forEach(item => {
+
+      let searchedItem = data.find(d => d.name === item)
+      result.push(searchedItem)
+    })
+    return result
   }
 
   useEffect((e) => {
@@ -39,9 +36,9 @@ const Checkout = (props) => {
     //Merges the Two Objects
     for (const property in itemsCount) {
       items.forEach(i => {
-        if(i['name'] === property ) {
+        if (i['name'] === property) {
           i.count = itemsCount[property]
-        } 
+        }
       })
     }
     setCartItems(items)
@@ -52,15 +49,17 @@ const Checkout = (props) => {
 
   return (
     <section className='checkout-container' >
-      
+
       {cart.length > 0 && <div className='full-cart'>  {cartItems.map((e) => (
-        <Cartitem  key={e.name} props={{e, setCart, cart}}></Cartitem>
-      ))} 
-              <div className='checkout-btn'> Checkout </div>
+        <Cartitem key={e.name} props={{ e, setCart, cart }}></Cartitem>
+      ))}
+        <div className='checkout-btn'> Checkout </div>
       </div>
       }
-      {cart.length <= 0 && <h2> Your cart is empty... :(</h2>} 
-    
+      {cart.length <= 0 && <h2 className="empty-cart"> Your cart is empty... 😔
+
+      </h2>}
+
 
 
     </section>

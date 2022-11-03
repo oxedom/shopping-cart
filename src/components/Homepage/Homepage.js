@@ -21,7 +21,7 @@ const HomePage = () => {
   }, [counter]);
 
   return (
-    <div className="homepage-body">
+    <div className="homepage-body zoom-in-zoom-out ">
       <h1> Taking the photo in... {counter}!</h1>
       <img onClick={handleClick} id='homepage-img' alt="the photographer" src="https://i.imgur.com/TIIzwzi.jpg" />
     </div>

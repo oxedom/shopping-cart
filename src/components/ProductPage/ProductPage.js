@@ -40,6 +40,10 @@ const ProductPage = (props) => {
     }
   }, []);
 
+  const handlePlus = () => {
+    navigate(`/shop/product/${product.id + 1}`)
+  }
+
   return (
     <div>
       <div className="product-page-container">
@@ -60,7 +64,7 @@ const ProductPage = (props) => {
             alt={product.name}
           />
 
-          <div className="slide-btn "> Next </div>
+          <div onClick={handlePlus} className="slide-btn "> Next </div>
 
         </div>
 
