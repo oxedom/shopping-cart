@@ -6,14 +6,12 @@ const HomePage = () => {
 
 
   const navigate = useNavigate();
-  const handleClick = () => navigate("/shop");
-  const [counter, setCounter] = useState(5)
 
+  const [counter, setCounter] = useState(5)
+  const handleClick = () => navigate("/shop")
 
   useEffect(() => {
-    if(counter === 0) {
-      alert('www.google.com')
-    }
+    if (counter === 0) { navigate("/shop"); }
 
     const timer =
       counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
@@ -24,16 +22,12 @@ const HomePage = () => {
 
   return (
     <div className="homepage-body">
-                  <h1> Taking the photo in... {counter}!</h1>
-                 <img className="" id='homepage-img' alt="the photographer" src="https://i.imgur.com/TIIzwzi.jpg"/>
-
-           <Link  to="shop">
-
-      </Link>
-   
- 
+      <h1> Taking the photo in... {counter}!</h1>
+      <img onClick={handleClick} id='homepage-img' alt="the photographer" src="https://i.imgur.com/TIIzwzi.jpg" />
     </div>
-  );
+  )
+
+
 };
 
 export default HomePage;
