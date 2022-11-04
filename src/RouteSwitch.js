@@ -10,21 +10,21 @@ const RouteSwitch = (props) => {
   const { cart, setCart } = props.props;
 
   return (
-    <BrowserRouter basename="/shoping-cart">
+    <BrowserRouter>
       <Nav cart={cart} />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/shop" element={<ShoppingPage />} />
+        <Route path="shop" element={<ShoppingPage />} />
 
         <Route
           exact
-          path="/shop/product/:id"
+          path="shop/product/:id"
           element={<ProductPage props={{ setCart, cart }} />}
         />
 
-        <Route path="/contact" element={<Contact />} />
+        <Route path="contact" element={<Contact />} />
         <Route
-          path="/checkout"
+          path="checkout"
           element={<Checkout cart={cart} setCart={setCart} />}
         />
       </Routes>
