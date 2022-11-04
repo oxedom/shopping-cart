@@ -16,7 +16,7 @@ const ProductMenu = (props) => {
 
   return (
     <div className="card-body">
-      <button className="btn" onClick={handleClick}>
+      <button className="btn cart-btn" onClick={handleClick}>
         {" "}
         Add to Cart<p> Price: {product.price}</p>
       </button>

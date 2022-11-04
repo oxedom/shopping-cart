@@ -50,14 +50,22 @@ const ProductPage = (props) => {
     [params.id])
 
   const handleNext = () => {
-
-    navigate(`/shop/product/${product.id + 1}`, { replace: true })
+    let newRoute = product.id + 1
+    if (newRoute === data.length + 1) { newRoute = 1 }
+    navigate(`/shop/product/${newRoute}`, { replace: true })
     //TEMP FIX
     // navigate(0)
   }
 
+  const handleBack = () => {
+    let newRoute = product.id - 1
+    if (newRoute === 0) { newRoute = 1 }
+    navigate(`/shop/product/${newRoute}`, { replace: true })
+  }
+
+
   return (
-    <div>
+    <div >
       <div className="product-page-container">
 
         <div className="product-header">
@@ -68,7 +76,7 @@ const ProductPage = (props) => {
 
 
         <div className="img-container">
-          <div className="slide-btn"> Back</div>
+          <div onClick={handleBack} className="slide-btn"> Back</div>
           <img
             className="product-img"
             loading="lazy"

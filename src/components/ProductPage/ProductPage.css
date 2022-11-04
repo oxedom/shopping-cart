@@ -34,6 +34,7 @@
 
 .product-header {
   margin-top: 1rem;
-  display: flex;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+
 }
