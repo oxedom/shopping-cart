@@ -7,6 +7,7 @@
 }
 
 .product-img {
+  
   width: 50%;
 }
 
@@ -15,6 +16,8 @@
   justify-content: center;
   gap: 1.5rem;
 }
+
+
 
 .slide-btn {
   border: 1px black solid;

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import HomePage from "./components/Homepage/Homepage";
 import ShoppingPage from "./components/ShoppingPage/ShoppingPage";
 import Nav from "./components/Nav/Nav";
@@ -10,7 +10,7 @@ const RouteSwitch = (props) => {
   const { cart, setCart } = props.props;
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Nav cart={cart} />
       <Routes>
         <Route exact path="/" element={<HomePage />} />
@@ -28,7 +28,7 @@ const RouteSwitch = (props) => {
           element={<Checkout cart={cart} setCart={setCart} />}
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
