@@ -1,13 +1,18 @@
-import { useEffect } from 'react';
-import './ProductMenu.css'
+import { useEffect } from "react";
+import "./ProductMenu.css";
 
 const ProductMenu = (props) => {
+  const { setCart, product, setProduct, cart } = props;
 
-  const { setCart, product, setProduct,  cart } = props;
+  const addToCart = (product) => {
+    setCart((prev) => {
+      return [...prev, product.name];
+    });
+  };
 
-  const addToCart = (product) => {  setCart((prev) => { return [...prev,product.name]}) }
-    
-  const handleClick = (e) => { addToCart(product)}
+  const handleClick = (e) => {
+    addToCart(product);
+  };
 
   return (
     <div className="card-body">

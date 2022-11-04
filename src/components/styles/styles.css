@@ -41,8 +41,6 @@ h1 {
   font-family: Satoshi-Bold;
 }
 
-
-
 @media screen and (min-width: 720px) {
   .shoping-grid {
     grid-template-columns: 1fr 1fr 1fr;
@@ -66,15 +64,13 @@ h1 {
   color: rgb(0, 0, 0);
   user-select: none;
   border: 1px solid;
-  padding: 0.175rem 0.50rem;
+  padding: 0.175rem 0.5rem;
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.25rem;
 
   transition: 0.2s ease-in-out;
 }
-
-
 
 .btn:hover {
   background-color: rgb(0, 0, 0);
@@ -83,21 +79,8 @@ h1 {
 }
 
 .btn:active {
- transform: scale(1.05);
+  transform: scale(1.05);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @keyframes fadeInAnimation {
   0% {
@@ -108,15 +91,12 @@ h1 {
   }
 }
 
-
-
-
 /* .product-desc {
   display: flex;
   justify-content: center;
   align-items: center;
   /* align-self: flex-start */
-/* } */ 
+/* } */
 
 /* .card-pricebox {
   border-bottom: 1px solid black;

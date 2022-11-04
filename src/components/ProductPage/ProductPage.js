@@ -9,7 +9,7 @@ const ProductPage = (props) => {
 
   const errorIMG = "https://www.rastanley.com.au/img/products/NoImageLarge.png";
   const errorObj = { name: "NO IMG", src: errorIMG };
-  const getProdByID = (id) => data.find((item) => item.id == id);
+  const getProdByID = (id) => data.find((item) => item.id === parseInt(id));
   const navigate = useNavigate();
   const params = useParams();
   const location = useLocation();
@@ -17,12 +17,12 @@ const ProductPage = (props) => {
   const { fromShopRoute = false, prodProps = errorObj } = location.state || {};
 
   //Use Effect that runs when the COMP mounts
-  useEffect((e) => {
+  useEffect(() => {
     //If the User got to the product page from the Shop page,
     // we will pass Shop page Data to the Product to prevent overfetching the Data
-    // if (fromShopRoute) {
-    //   setProduct(prodProps);
-    // }
+    if (fromShopRoute) {
+      setProduct(prodProps);
+    }
 
     //If the User got to the page by any other means we will "fetch" the data from an API (Local DATA File that in the REPO in this example)
     if (true) {
@@ -45,10 +45,7 @@ const ProductPage = (props) => {
   },
     [params.id])
 
-  const handlePlus = () => {
-    navigate(`/shop/product/5`, { replace: true })
-
-  }
+  const handleNext = () => { navigate(`/shop/product/${product.id + 1}`, { replace: true }) }
 
   return (
     <div>
@@ -70,10 +67,9 @@ const ProductPage = (props) => {
             alt={product.name}
           />
 
-          <div onClick={handlePlus} className="slide-btn ">
+          <div onClick={handleNext} className="slide-btn ">
             Next
           </div>
-
 
         </div>
 
