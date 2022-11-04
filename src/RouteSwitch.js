@@ -10,7 +10,7 @@ const RouteSwitch = (props) => {
   const { cart, setCart } = props.props;
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/shopping-cart" >
       <Nav cart={cart} />
       <Routes>
         <Route path="/" element={<HomePage />} />
