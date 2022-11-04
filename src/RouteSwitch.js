@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Router, Switch } from "react-router-dom";
 import HomePage from "./components/Homepage/Homepage"
 import ShoppingPage from "./components/ShoppingPage/ShoppingPage";
 import Nav from "./components/Nav/Nav";
@@ -16,10 +16,14 @@ const RouteSwitch = (props) => {
       <Routes>
         <Route exact path="/" element={<HomePage />} />
         <Route path="/shop" element={<ShoppingPage />} />
+
         <Route
-          path="/shop/product/:id"
-          element={<ProductPage props={{ setCart, cart}} />}
+          path="/shop/product/:id" exact
+          element={<ProductPage props={{ setCart, cart }} />}
         />
+
+
+
         <Route path="/contact" element={<Contact />} />
         <Route path="/checkout" element={<Checkout cart={cart} setCart={setCart} />} />
       </Routes>

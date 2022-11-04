@@ -1,5 +1,6 @@
 import data from '../toy-api/data';
 import Cartitem from "../Cartitem/Cartitem"
+import { Link } from 'react-router-dom';
 import './Checkout.css'
 import { useState, useEffect } from 'react';
 
@@ -56,9 +57,11 @@ const Checkout = (props) => {
         <div className='checkout-btn'> Checkout </div>
       </div>
       }
-      {cart.length <= 0 && <h2 className="empty-cart"> Your cart is empty... 😔
+      {cart.length <= 0 && (<>
+        <h2 className="empty-cart"> Your cart is empty... 😔</h2>
+        <Link to='/shop'> Would you like to look again? 🛍️ </Link>
 
-      </h2>}
+      </>)}
 
 
 

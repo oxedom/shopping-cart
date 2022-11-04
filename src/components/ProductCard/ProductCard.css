@@ -11,7 +11,8 @@
   }
 
   .card-img:hover {
-    transform: scale(1.005);
+
+    /* position: relative; */
     background-color: black;
 
   }

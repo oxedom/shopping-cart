@@ -1,4 +1,4 @@
-import { useLocation, useParams, useNavigate } from "react-router-dom";
+import { useLocation, useParams, useNavigate, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import './ProductPage.css'
 import data from "../toy-api/data"
@@ -20,12 +20,12 @@ const ProductPage = (props) => {
   useEffect((e) => {
     //If the User got to the product page from the Shop page,
     // we will pass Shop page Data to the Product to prevent overfetching the Data
-    if (fromShopRoute) {
-      setProduct(prodProps);
-    }
+    // if (fromShopRoute) {
+    //   setProduct(prodProps);
+    // }
 
     //If the User got to the page by any other means we will "fetch" the data from an API (Local DATA File that in the REPO in this example)
-    if (!fromShopRoute) {
+    if (true) {
       //Will search for the product by searching by it's ID
       let _product = getProdByID(params.id);
       //If the search was a successful  it will set the Product page to the data from the search
@@ -40,8 +40,14 @@ const ProductPage = (props) => {
     }
   }, []);
 
+  useEffect(() => {
+    navigate()
+  },
+    [params.id])
+
   const handlePlus = () => {
-    navigate(`/shop/product/${product.id + 1}`)
+    navigate(`/shop/product/5`, { replace: true })
+
   }
 
   return (
@@ -64,7 +70,10 @@ const ProductPage = (props) => {
             alt={product.name}
           />
 
-          <div onClick={handlePlus} className="slide-btn "> Next </div>
+          <div onClick={handlePlus} className="slide-btn ">
+            Next
+          </div>
+
 
         </div>
 
@@ -72,7 +81,7 @@ const ProductPage = (props) => {
 
       </div>
 
-    </div>
+    </div >
   );
 };
 
