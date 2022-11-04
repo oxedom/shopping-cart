@@ -7,6 +7,7 @@ import ProductMenu from "../ProductMenu/ProductMenu"
 const ProductPage = (props) => {
   const { setCart, cart } = props.props;
 
+
   const errorIMG = "https://www.rastanley.com.au/img/products/NoImageLarge.png";
   const errorObj = { name: "NO IMG", src: errorIMG };
   const getProdByID = (id) => data.find((item) => item.id === parseInt(id));
@@ -15,9 +16,10 @@ const ProductPage = (props) => {
   const location = useLocation();
   const [product, setProduct] = useState({});
   const { fromShopRoute = false, prodProps = errorObj } = location.state || {};
-
+  const { id } = useParams();
   //Use Effect that runs when the COMP mounts
   useEffect(() => {
+
     //If the User got to the product page from the Shop page,
     // we will pass Shop page Data to the Product to prevent overfetching the Data
     if (fromShopRoute) {
@@ -25,27 +27,34 @@ const ProductPage = (props) => {
     }
 
     //If the User got to the page by any other means we will "fetch" the data from an API (Local DATA File that in the REPO in this example)
-    if (true) {
+    if (!fromShopRoute) {
       //Will search for the product by searching by it's ID
       let _product = getProdByID(params.id);
+      console.log(_product);
       //If the search was a successful  it will set the Product page to the data from the search
       if (_product !== undefined) {
         setProduct(_product);
       }
       //If the search returns undefiend it will set the Product to an errorObj and reroute the user to shop page
       else {
-        setProduct(errorObj);
         navigate("/shop");
+        //TEMP FIX
+        navigate(0)
       }
     }
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     navigate()
   },
     [params.id])
 
-  const handleNext = () => { navigate(`/shop/product/${product.id + 1}`, { replace: true }) }
+  const handleNext = () => {
+
+    navigate(`/shop/product/${product.id + 1}`, { replace: true })
+    //TEMP FIX
+    // navigate(0)
+  }
 
   return (
     <div>
