@@ -13,7 +13,7 @@ const RouteSwitch = (props) => {
     <BrowserRouter basename="/shopping-cart" >
       <Nav cart={cart} />
       <Routes>
-        <Route path="home" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="shop" element={<ShoppingPage />} />
 
         <Route
