@@ -9,6 +9,9 @@
 .product-img {
   
   width: 50%;
+  min-width: 1000px;
+  height: auto;
+  aspect-ratio: 16/10;
 }
 
 .img-container {

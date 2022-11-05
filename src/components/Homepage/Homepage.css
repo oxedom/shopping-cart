@@ -8,12 +8,3 @@
 img {
   width: 25%;
 }
-.zoom-in-zoom-out {
-  animation: zoom-in-zoom-out 6s ease-in;
-}
-
-@keyframes zoom-in-zoom-out {
-  100% {
-    transform: scale(1.1);
-  }
-}
