@@ -30,7 +30,7 @@ const ProductPage = (props) => {
     if (!fromShopRoute) {
       //Will search for the product by searching by it's ID
       let _product = getProdByID(params.id);
-      console.log(_product);
+   
       //If the search was a successful  it will set the Product page to the data from the search
       if (_product !== undefined) {
         setProduct(_product);

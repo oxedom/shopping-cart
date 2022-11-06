@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 const Checkout = (props) => {
   const { cart, setCart } = props;
   const [cartItems, setCartItems] = useState([]);
+  const [total, setTotal] = useState([])
 
   const objectCounter = (objectPara) => {
     const counts = {};
@@ -27,6 +28,21 @@ const Checkout = (props) => {
     return result;
   };
 
+  //NEEDS TO HAVE COUNT PROP
+  const countTotal = (itemsArray) => {
+    let total = 0
+    itemsArray.forEach(item => {
+
+      let price = parseInt(item.price.replace('$,"'))
+    
+       total = total + (price * item.count);
+     })
+
+     return total
+
+  }
+
+
   useEffect(
     (e) => {
       //Counts the amounts of dups in the cart array
@@ -43,6 +59,12 @@ const Checkout = (props) => {
         });
       }
       setCartItems(items);
+
+      setTotal(countTotal(items))
+  
+
+
+
     },
     [cart]
   );
@@ -55,7 +77,10 @@ const Checkout = (props) => {
           {cartItems.map((e) => (
             <Cartitem key={e.name} props={{ e, setCart, cart }}></Cartitem>
           ))}
+          <div>
           <div className="checkout-btn"> Checkout </div>
+          <div className="total"> {total} </div>
+          </div>
         </div>
       )}
       {cart.length <= 0 && (

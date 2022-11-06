@@ -96,7 +96,7 @@
     aspect-ratio: 16/10;
   }
 
-  h1 {
+  .product-header h1 {
     font-size: 20px;
     display: flex;
     justify-items: center;

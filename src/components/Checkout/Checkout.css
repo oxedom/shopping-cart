@@ -50,5 +50,15 @@ h2 {
     direction: rtl;
   }
 
+  .checkout-container > h2  {
+    font-size: 30px
+  }
+
+  .checkout-container > a  {
+    font-size: 20px;
+    /* text-decoration: underline; */
+  }
+
+
 }
 
