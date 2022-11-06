@@ -10,7 +10,6 @@ jobs:
         with: 
           node-version: 16
       - run: npm install 
-        uses: actions/checkout@v3
       - name: build
       - run: npm run build
       - name: Deploy  
