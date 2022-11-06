@@ -1,7 +1,6 @@
 name: Shopping Cart Photography Website
 
 on: [push]
-
 jobs:
   build:
     runs-on: ubuntu-latest
