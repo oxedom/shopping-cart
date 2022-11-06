@@ -1,11 +1,11 @@
 import ProductCard from "../ProductCard/ProductCard";
 import "./ShoppingPage.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import data from '../toy-api/data.js'
 
 const ShoppingPage = () => {
   //All of the Products are stored in Shopping Page Comp
-  const [products, setProducts] = useState(data);
+  const [products] = useState(data);
 
 
   return (

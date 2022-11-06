@@ -1,4 +1,4 @@
-import { useLocation, useParams, useNavigate, Link } from "react-router-dom";
+import { useLocation, useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import './ProductPage.css'
 import data from "../toy-api/data"

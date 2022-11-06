@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import "./Cartitem.css";
 
 const Cartitem = (props) => {

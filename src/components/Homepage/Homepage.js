@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import "./Homepage.css";
 
 const HomePage = () => {
@@ -16,7 +16,7 @@ const HomePage = () => {
     const timer =
       counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
     return () => clearInterval(timer);
-  }, [counter]);
+  }, [counter, navigate]);
 
   return (
     <div className="homepage-body zoom-in-zoom-out ">

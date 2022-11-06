@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import styles from "./components/styles/styles.css";
+import {  useState } from "react";
+import "./components/styles/styles.css";
 import RouteSwitch from "./RouteSwitch";
 
 function App() {

@@ -1,8 +1,7 @@
-import { useEffect } from "react";
 import "./ProductMenu.css";
 
 const ProductMenu = (props) => {
-  const { setCart, product, setProduct, cart } = props;
+  const { setCart, product } = props;
 
   const addToCart = (product) => {
     setCart((prev) => {
