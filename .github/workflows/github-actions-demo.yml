@@ -10,15 +10,14 @@ jobs:
         with: 
           node-version: 16
       - name: Install dependencies
-        run: npm i 
+        run: npm ci
       - name: build
         run: npm run build
-      - name: Deploy  
-        run: npm run deploy
-                git config --global user.name $user_name
-                git config --global user.email $user_email
-                git remote set-url origin https://${github_token}@github.com/${repository}
- 
+      - name: Deploy to GH Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./build
+          github_token: ${{ secrets.GITHUB_TOKEN }}
         env:
             github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
             repository: ${{ github.repository }}
