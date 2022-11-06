@@ -1,16 +1,24 @@
-name: Shopping Cart Photography Website
-
+name: name: CI/CD FOR SHOPPING CART
 on: [push]
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Shopping Cart
-        uses: actions/checkout@v3
-      - name: Setup Node
-        run: npm run build
-      - name: Deploy to GH Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          publish_dir: ./.output/public
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      steps:
+      name: Setup node
+      uses: actions/setup-node@v3
+      with:
+         node-version: 16
+      name: Install dependencies
+      run: npm install   
+
+
+      name: Deploy
+      run: |
+        git config --global user.name $user_name
+        git config --global user.email $user_email
+        git remote set-url origin https://${github_token}@github.com/${repository}
+        npm run deploy
+      env:
+        github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
+        repository: ${{ github.repository }}
