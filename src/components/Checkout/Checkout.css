@@ -42,6 +42,7 @@ h2 {
 .checkout-total {
   font-family: Satoshi-Bold;
   align-items: center;
+  
   gap: 3rem;
   display: flex;
 }
@@ -56,6 +57,12 @@ h2 {
     margin-left: 500px;
     margin-right: 500px;
   }
+
+  .checkout-total {
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
 }
 
 
@@ -64,6 +71,9 @@ h2 {
     margin-left: 100px;
     margin-right: 100px;
   }
+
+
+  
 }
 
 
