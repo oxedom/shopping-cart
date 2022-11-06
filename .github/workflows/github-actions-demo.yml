@@ -17,9 +17,8 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: ./build
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
         env:
-            github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
             repository: ${{ github.repository }}
  
  
