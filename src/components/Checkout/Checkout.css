@@ -78,10 +78,16 @@ h2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-flow: dense;
+
     direction: rtl;
     margin: 50px;
     gap: 10px;
   }
+
+  .plus-minus {
+    order: -1;
+   }
+ 
 
   .checkout-container > h2  {
     font-size: 30px

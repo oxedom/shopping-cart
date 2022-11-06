@@ -16,9 +16,10 @@ const ProductMenu = (props) => {
 
   return (
     <div className="card-body">
-      <button className="btn cart-btn" onClick={handleClick}>
+      <button className="btn" onClick={handleClick}>
         {" "}
-        Add to Cart<p> Price: {product.price}</p>
+      <p> Add to Cart</p>
+      <p> Price: {product.price}</p>
       </button>
     </div>
   );
