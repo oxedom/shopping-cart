@@ -33,12 +33,14 @@ const ProductPage = (props) => {
         navigate(0)
       }
     }
+       // eslint-disable-next-line react-hooks/exhaustive-deps
   , [id])
 
-  // useEffect(() => {
-  //   navigate()
-  // },
-  //   [params.id])
+  useEffect(() => {
+    navigate()
+  },
+       // eslint-disable-next-line react-hooks/exhaustive-deps
+    [params.id])
 
   const handleNext = () => {
     let newRoute = product.id + 1
