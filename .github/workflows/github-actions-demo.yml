@@ -4,16 +4,14 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-      steps:
-      name: Setup node
+    steps:
+    - name: Setup node
       uses: actions/setup-node@v3
       with:
-         node-version: 16
-      name: Install dependencies
+        node-version: 16
+    - name: Install dependencies
       run: npm install   
-
-
-      name: Deploy
+    - name: Deploy
       run: |
         git config --global user.name $user_name
         git config --global user.email $user_email
