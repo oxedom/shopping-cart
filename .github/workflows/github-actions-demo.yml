@@ -9,12 +9,6 @@ jobs:
       - name: Checkout Shopping Cart
         uses: actions/checkout@v3
       - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - name: Install Production Dependencies
-        run: npm ci --legacy-peer-deps --omit=dev
-      - name: Generate Nuxt Site
         run: npm run build
       - name: Deploy to GH Pages
         uses: peaceiris/actions-gh-pages@v3
