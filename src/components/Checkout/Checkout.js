@@ -77,9 +77,9 @@ const Checkout = (props) => {
           {cartItems.map((e) => (
             <Cartitem key={e.name} props={{ e, setCart, cart }}></Cartitem>
           ))}
-          <div>
+          <div className="checkout-total">
           <div className="checkout-btn"> Checkout </div>
-          <div className="total"> {total} </div>
+          <div className="total"> Total {total}$ </div>
           </div>
         </div>
       )}
