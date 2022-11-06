@@ -42,12 +42,12 @@ const ProductPage = (props) => {
         navigate(0)
       }
     }
-  }, [id]);
+  }, [id], navigate);
 
   useEffect(() => {
     navigate()
   },
-    [params.id])
+    [params.id], navigate)
 
   const handleNext = () => {
     let newRoute = product.id + 1
