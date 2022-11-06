@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.ed83a131.css",
-    "main.js": "/shopping-cart/static/js/main.451de5b4.js",
+    "main.css": "/shopping-cart/static/css/main.160f5920.css",
+    "main.js": "/shopping-cart/static/js/main.80ce663a.js",
     "static/media/Satoshi-Medium.ttf": "/shopping-cart/static/media/Satoshi-Medium.759562088ba19068aef8.ttf",
     "static/media/Satoshi-Regular.ttf": "/shopping-cart/static/media/Satoshi-Regular.fe762acc7e97cb612805.ttf",
     "static/media/Satoshi-Bold.ttf": "/shopping-cart/static/media/Satoshi-Bold.137a52d9f47dd71c6247.ttf",
     "index.html": "/shopping-cart/index.html",
-    "main.ed83a131.css.map": "/shopping-cart/static/css/main.ed83a131.css.map",
-    "main.451de5b4.js.map": "/shopping-cart/static/js/main.451de5b4.js.map"
+    "main.160f5920.css.map": "/shopping-cart/static/css/main.160f5920.css.map",
+    "main.80ce663a.js.map": "/shopping-cart/static/js/main.80ce663a.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed83a131.css",
-    "static/js/main.451de5b4.js"
+    "static/css/main.160f5920.css",
+    "static/js/main.80ce663a.js"
   ]
 }
