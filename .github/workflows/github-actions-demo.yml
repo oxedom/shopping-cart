@@ -5,18 +5,18 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-        name: Setup node
+      - name: Setup node
         uses: actions/setup-node@v3
         with:
               node-version: 16
-        name: Install dependencies
-        run: npm install 
+      - name: Install dependencies
+      - run: npm install 
         uses: actions/checkout@v3
-        name: Deploy  
-        name: build
-        run: npm run build
+      - name: Deploy  
+      - name: build
+      - run: npm run build
 
-        run: 
+      - run: 
               git config --global user.name $user_name
               git config --global user.email $user_email
               git remote set-url origin https://${github_token}@github.com/${repository}
